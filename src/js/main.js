@@ -13,16 +13,16 @@
 
             return this;
         },
-        scrollJack: function(class) {
+        scrollJack: function(options) {
 
             var self = this;
             var topOffset = $(self).offset().top;
 
             $(window).on('scroll', function(e) {
                 if( $(this).scrollTop() > (topOffset-70) ) {
-                    $('body').addClass(class);
+                    $('body').addClass(options.class);
                 } else {
-                    $('body').removeClass(class);
+                    $('body').removeClass(options.class);
                 }
             });
 
@@ -32,7 +32,7 @@
 
     $('.nav-menu-toggle').hamburger();
 
-    $('.footer').scrollJack('inverse');
+    $('.footer').scrollJack({class:'inverse'});
 
     $(document).ready(function(){
         $('.owl-carousel').owlCarousel({
