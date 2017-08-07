@@ -3,4 +3,6 @@ node_modules/
 !dist/
 dist/*
 !dist/images
+dist/fonts/*
+!dist/fonts/presa-font/
 yarn\.lock
