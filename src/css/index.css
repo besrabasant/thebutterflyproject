@@ -1,0 +1,9 @@
+section.keynote {
+    margin-top: 100vh;
+}
+
+section.keynote p {
+    padding: 70px 20px;
+    font-size: 1.1rem;
+    color: rgba(255, 107, 36, 0.95);
+}

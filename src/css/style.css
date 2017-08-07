@@ -1,0 +1,174 @@
+@charset "utf-8";
+html,
+body {
+    font-size: 1.2rem;
+    font-family: "Playfair";
+    letter-spacing: 0.02rem;
+}
+
+.font-playfair {
+    font-family: "Playfair" !important;
+}
+
+.nav.nav-fixed {
+    position: fixed;
+    z-index: 110;
+    width: 100%;
+    top: 0;
+}
+
+.nav .brand {
+    display: block;
+    text-align: center;
+}
+
+.nav .nav-menu-toggle {
+    width: 31px;
+    height: 35px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    margin: 5px 18px;
+}
+
+.nav .nav-menu-toggle.expanded {
+    z-index: 200;
+}
+
+.nav .nav-menu-toggle .hamburger,
+.nav .nav-menu-toggle .hamburger:before,
+.nav .nav-menu-toggle .hamburger:after {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    display: block;
+    background-color: rgba(255, 107, 36, 0.95);
+    transition: all 0.5s ease;
+}
+
+.inverse .nav .nav-menu-toggle .hamburger,
+.inverse .nav .nav-menu-toggle .hamburger:before,
+.inverse .nav .nav-menu-toggle .hamburger:after {
+    background-color: #fff;
+}
+
+.nav .nav-menu-toggle .hamburger {
+    top: 50%;
+}
+
+.nav .nav-menu-toggle.expanded .hamburger {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nav .nav-menu-toggle .hamburger:before,
+.nav .nav-menu-toggle .hamburger:after {
+    content: "";
+    transform-origin: left;
+}
+
+.nav .nav-menu-toggle .hamburger:before {
+    top: -11px;
+}
+
+.nav .nav-menu-toggle.expanded .hamburger:before,
+.nav .nav-menu-toggle.expanded .hamburger:after {
+    background-color: #fff;
+}
+
+.nav .nav-menu-toggle.expanded .hamburger:before {
+    transform: rotate(45deg);
+}
+
+.nav .nav-menu-toggle .hamburger:after {
+    top: 11px;
+}
+
+.nav .nav-menu-toggle.expanded .hamburger:after {
+    transform: rotate(-45deg);
+}
+
+.nav .nav-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgba(255, 107, 36, 0.95);
+    opacity: 0;
+    transition: all 0.25s cubic-bezier(0.57, 0.24, 0.47, 0.63);
+}
+
+.nav .nav-menu-wrapper.show {
+    z-index: 100;
+    opacity: 1;
+}
+
+.nav .nav-menu,
+.footer-menu {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 100px;
+    position: relative;
+    z-index: inherit;
+}
+
+.nav .nav-menu .nav-item,
+.footer-menu .nav-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav .nav-menu .nav-link,
+.footer-menu .nav-link {
+    text-align: center;
+    position: relative;
+    z-index: inherit;
+    color: #fff;
+    font-family: "Playfair";
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: inline;
+    padding: 0 5px 0;
+}
+
+.nav .nav-menu .nav-link:after,
+.footer-menu .nav-link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    right: 100%;
+    background-color: #fff;
+    transition: all 0.5s cubic-bezier(0.32, 0.02, 0.34, 0.88);
+}
+
+.nav .nav-menu .nav-item:hover .nav-link:after,
+.footer-menu .nav-item:hover .nav-link:after {
+    right: 0;
+}
+
+section {
+    position: relative;
+    z-index: 100;
+}
+
+.highlight {
+    color: #000 !important;
+}
+
+.highlight:before {
+    content: "\f178";
+    font-family: 'FontAwesome';
+    margin-right: 3px;
+    position: relative;
+    top: 0.075rem;
+}
+
+.footer {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 107, 36, 0.95);
+}
