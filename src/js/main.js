@@ -3,6 +3,7 @@
         hamburger: function(){
             $(this).click(function(){
                 $(this).toggleClass('expanded');
+                $('body').toggleClass('menu-visible');
                 showMenu(this);
             })
 
@@ -28,9 +29,11 @@
 
             var self = this;
             var topOffset = $(self).offset().top;
+            var screenWidth = $(window).width();
+            var screenHeight = $(window).height();
 
             $(window).on('scroll', function(e) {
-                if( $(this).scrollTop() > (topOffset-70) ) {
+                if( (screenWidth < 768 && $(this).scrollTop() > (topOffset-90)) || (screenWidth >= 768 && $(this).scrollTop()+screenHeight-400 > topOffset ) ) {
                     $('body').addClass(options.class);
                 } else {
                     $('body').removeClass(options.class);

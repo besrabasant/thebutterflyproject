@@ -37,11 +37,12 @@ gulp.task('compile', function() {
 gulp.task('css', function() {
     return gulp.src([
             'src/css/style.css',
+            'src/css/footer.css',
             'src/css/slider.css',
             'src/css/index.css',
         ])
         .pipe(autoprefixer({
-            browsers: ['last 20 versions','Firefox > 20'],
+            browsers: ['last 20 versions','Firefox > 20', 'Firefox < 20'],
             cascade: false
         }))
         .pipe(concatCss('main.css'))

@@ -70,6 +70,19 @@ body {
     color: #fff;
 }
 
+@media screen and (min-width: 768px) {
+    .nav .brand,
+    .inverse .nav .brand {
+        left: 0;
+        top: 15px;
+        transform: translateX(-35vw);
+    }
+    .nav .brand .logo,
+    .inverse .nav .brand .logo {
+        margin-left: -40px;
+    }
+}
+
 .nav .nav-menu-toggle {
     width: 31px;
     height: 35px;
@@ -86,6 +99,17 @@ body {
 .nav .nav-menu-toggle.expanded,
 .inverse .nav .nav-menu-toggle.expanded {
     z-index: 200;
+}
+
+@media screen and (min-width: 768px) {
+    .nav .nav-menu-toggle,
+    .inverse .nav .nav-menu-toggle {
+        display: none;
+    }
+    .nav .nav-menu-toggle.expanded,
+    .inverse .nav .nav-menu-toggle.expanded {
+        z-index: -99;
+    }
 }
 
 .nav .nav-menu-toggle .hamburger,
@@ -237,6 +261,57 @@ body {
     right: 0;
 }
 
+@media screen and (min-width: 768px) {
+    .nav .nav-menu-wrapper {
+        opacity: 1;
+        background-color: transparent;
+    }
+    .inverse .nav .nav-menu-wrapper {
+        background-color: rgba(74, 88, 167, 1);
+    }
+    .nav .nav-menu-wrapper .title {
+        display: none;
+    }
+    .nav .nav-menu {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        display: inline-flex;
+        justify-content: flex-end;
+        padding-right: 5vw;
+        margin-top: 50px;
+        transition: all 0.5s ease;
+    }
+    .inverse .nav .nav-menu {
+        opacity: 0;
+    }
+    .nav .nav-menu .nav-item {
+        opacity: 1;
+    }
+    .nav .nav-menu .nav-link {
+        color: rgba(86, 86, 86, 1);
+        margin: 0 20px;
+        font-size: 0.9rem;
+    }
+    .inverse .nav .nav-menu .nav-link {
+        color: #fff;
+    }
+    .nav .nav-menu .nav-item:hover .nav-link {
+        color: rgba(74, 88, 167, 1);
+    }
+    .nav .nav-menu .nav-item .nav-link:after {
+        background-color: rgba(74, 88, 167, 1);
+        bottom: -4px;
+    }
+    .nav .nav-menu .nav-item.active .nav-link {
+        color: rgba(239, 163, 100, 1);
+    }
+    .nav .nav-menu .nav-item.active .nav-link:after {
+        background-color: rgba(239, 163, 100, 1);
+        right: 0;
+    }
+}
+
 section {
     position: relative;
     z-index: 100;
@@ -259,7 +334,7 @@ section {
 }
 
 .highlight-secondary {
-    color: #4a58a7 !important;
+    color: rgba(74, 88, 167, 1) !important;
 }
 
 .highlight-grey {
@@ -279,10 +354,4 @@ section {
 
 .highlight-yellow {
     color: #edda39 !important;
-}
-
-.footer {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(239, 163, 100, 1);
 }

@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
+    "scripts": {
+        "start": "gulp"
+    },
     "dependencies": {
         "animate.css": "git+https://github.com/daneden/animate.css.git",
         "bootstrap": "4.0.0-alpha.6",

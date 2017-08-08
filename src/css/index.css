@@ -1,9 +1,17 @@
 section.keynote {
     margin-top: 100vh;
+    min-height: 100vh;
 }
 
 section.keynote p {
     padding: 120px 20px;
     font-size: 1.1rem;
     color: rgba(239, 163, 100, 1);
+}
+
+@media screen and (min-width: 576px) {
+    section.keynote p {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 }

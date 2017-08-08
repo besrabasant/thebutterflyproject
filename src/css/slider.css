@@ -8,8 +8,15 @@ section.slider,
     z-index: 100;
 }
 
+@media screen and (min-width: 768px) {
+    section.slider,
+    .slider .slider-wrapper {
+        width: calc(100vw - 15px);
+    }
+}
+
 .slider .owl-carousel .slide {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-position: center center;
     background-repeat: no-repeat;
@@ -20,13 +27,31 @@ section.slider,
     justify-content: center;
 }
 
+.slider .owl-carousel .slide .background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .slider .owl-carousel .slide .background {
+        position: fixed;
+        background-attachment: fixed;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 .owl-carousel .slide .title,
 .owl-carousel .slide .subtitle {
     opacity: 0;
     color: #fff;
     text-align: left;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 15vw;
     font-weight: 700;
     font-size: 1.7rem;
     position: relative;
@@ -36,4 +61,26 @@ section.slider,
 .owl-carousel .slide .subtitle {
     margin-top: 15px;
     font-size: 0.7rem;
+}
+
+@media screen and (min-width:576px) {
+    .owl-carousel .slide .title,
+    .owl-carousel .slide .subtitle {
+        padding: 0 12vw;
+    }
+    .owl-carousel .slide .title {
+        font-size: 2.5rem;
+    }
+    .owl-carousel .slide .subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .owl-carousel .slide .title {
+        font-size: 3rem;
+    }
+    .owl-carousel .slide .subtitle {
+        font-size: 1.2rem;
+    }
 }
