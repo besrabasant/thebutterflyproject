@@ -1,6 +1,8 @@
 section.keynote {
     margin-top: 100vh;
     min-height: 100vh;
+    position: relative;
+    z-index: 200;
 }
 
 section.keynote p {

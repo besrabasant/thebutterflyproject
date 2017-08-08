@@ -266,6 +266,9 @@ body {
         opacity: 1;
         background-color: transparent;
     }
+    .hide-slider .nav .nav-menu-wrapper {
+        background-color: #fff;
+    }
     .inverse .nav .nav-menu-wrapper {
         background-color: rgba(74, 88, 167, 1);
     }
@@ -289,12 +292,12 @@ body {
         opacity: 1;
     }
     .nav .nav-menu .nav-link {
-        color: rgba(86, 86, 86, 1);
+        color: #fff;
         margin: 0 20px;
         font-size: 0.9rem;
     }
-    .inverse .nav .nav-menu .nav-link {
-        color: #fff;
+    .hide-slider .nav .nav-menu .nav-link {
+        color: rgba(86, 86, 86, 1);
     }
     .nav .nav-menu .nav-item:hover .nav-link {
         color: rgba(74, 88, 167, 1);

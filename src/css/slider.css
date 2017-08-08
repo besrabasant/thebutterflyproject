@@ -8,7 +8,7 @@ section.slider,
     z-index: 100;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width:768px) {
     section.slider,
     .slider .slider-wrapper {
         width: calc(100vw - 15px);
@@ -16,32 +16,29 @@ section.slider,
 }
 
 .slider .owl-carousel .slide {
-    width: 100%;
+    width: auto;
     height: 100vh;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .slider .owl-carousel .slide .background {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
+    left: 0;
 }
 
 @media screen and (min-width: 768px) {
     .slider .owl-carousel .slide .background {
-        position: fixed;
         background-attachment: fixed;
-        transform: translate3d(0, 0, 0);
     }
 }
 
