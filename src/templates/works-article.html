@@ -1,0 +1,15 @@
+<div class="row no-gutters">
+    {% if loop.first %}
+    <article class="col article visible">
+    {% else %}
+    <article class="col article">
+    {% endif %}
+        <div class="post-img" style="background-image:url('{{ post.attributes.bgImage }}') " ></div>
+        <div class="row no-gutters ">
+            <div class="col-12 col-md-6 push-md-6">
+                <h1 class="title highlight-primary">{{ post.attributes.title }}</h1>
+                <p class="body">{{ post.body }}</p>
+            </div>
+        </div>
+    </article>
+</div>

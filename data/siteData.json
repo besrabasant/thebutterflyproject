@@ -1,0 +1,21 @@
+{
+    "sitename": "The Butterfly Project",
+    "menu": [{
+            "name": "Our Vision",
+            "url": "./"
+        },
+        {
+            "name": "Services",
+            "url": "#"
+        },
+        {
+            "name": "Blog",
+            "url": "blog.html"
+        },
+        {
+            "name": "Contact Us",
+            "url": "contact-us.html"
+        }
+    ]
+
+}

@@ -46,9 +46,13 @@
 
     $('.nav-menu-toggle').hamburger();
 
-    $('.footer').scrollJack({class:'inverse',mobileOffset: 90, desktopOffset: 300});
+    if($('.footer').length){
+        $('.footer').scrollJack({class:'inverse',mobileOffset: 90, desktopOffset: 350});
+    }
 
-    $('.keynote').scrollJack({class:'hide-slider', mobileOffset: 90, desktopOffset: 250});
+    if($('.keynote').length){
+        $('.keynote').scrollJack({class:'hide-slider', mobileOffset: 90, desktopOffset: 250});
+    }
 
     $(document).ready(function(){
 
@@ -93,7 +97,16 @@
         }
 
         function repositionSlideBg (slider) {
-            if($(window).width() >= 768) {
+            if($(window).width() < 768) {
+                $.each(slider.find('.owl-item'), function(i, el) {
+                    var bg = $(el).find('.slide').find('.background');
+                    var posX = (bg.data('pos-x'))? bg.data('pos-x'): 'center';
+                    var posY = (bg.data('pos-y'))? bg.data('pos-y'): 'center';
+                    bg.css('background-position-x', posX);
+                    bg.css('background-position-y', posY);
+                });
+            }
+            if($.browser.chrome == true && $(window).width() >= 768) {
                 $.each(slider.find('.owl-item'), function(i, el) {
                     var slideWidth = $(el).css('width');
                     var bg = $(el).find('.slide').find('.background');
@@ -105,6 +118,50 @@
 
         $(window).on('resize', function() {
             repositionSlideBg(slider);
+        });
+
+        if($('body.works-page').length){
+            var screenWidth = $(window).width();
+            var screenHeight = $(window).height();
+            var worksArticles = $('section.works').find('.article');
+
+            $.each(worksArticles, function(index, article){
+                var articleBlock = $(article).find('.row');
+
+                $(window).on('scroll', function(e) {
+                    if(screenWidth>=768 && isScrolledIntoView(articleBlock) ) {
+                        $(article).addClass('visible');
+                    } else {
+                        $(article).removeClass('visible');
+                    }
+                });
+            });
+
+            function isScrolledIntoView(elem) {
+                var docViewTop = $(window).scrollTop();
+                var docViewBottom = docViewTop + $(window).height();
+
+                var elemTop = $(elem).offset().top;
+                var elemBottom = elemTop + $(elem).height();
+
+                return ((elemTop <= docViewBottom));
+            }
+           
+            
+        }
+
+        $('input').on('focus', function() {
+            if(!$(this).val()){
+                $(this).prev('.label').css('display','none');
+                $(this).css('background-color','rgba(255, 255, 255, 0.8)');
+            }
+        });
+
+        $('input').on('blur', function() {
+            if(!$(this).val()){
+                $(this).prev('.label').css('display','block');
+                $(this).css('background-color','transparent');
+            }
         });
 
     });

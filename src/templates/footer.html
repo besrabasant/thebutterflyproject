@@ -1,23 +1,16 @@
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-12 col-md-6 push-lg-1">
+            <nav class="col-12 col-md-3 push-lg-1">
                 <ul class="footer-menu">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Vision</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Works</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
+                    {% for menuitem in site.menu %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ menuitem.url }}">{{ menuitem.name }}</a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </nav>
-            <div class="col-12 col-md-4 col-lg-3 push-md-2">
+            <div class="col-12 col-md-3 col-lg-2 push-md-5 push-lg-6">
                 <ul class="social-links">
                     <li><a class="facebook" href="#"><span class="fa fa-facebook"></span></a></li>
                     <li><a class="twitter" href="#"><span class="fa fa-twitter"></span></a></li>

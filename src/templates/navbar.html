@@ -2,10 +2,10 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-1">
-                <a href="/" class="brand">
+                <a href="/" class="brand" data-tagline="Empowering Through Entrepreneurship">
                     <img class="logo" src="images/logo.png" alt="The Butterfly Project">
                 </a>
-                <a href="/" class="brand brand-inverse">
+                <a href="/" class="brand brand-inverse" data-tagline="Empowering Through Entrepreneurship">
                     <img class="logo" src="images/logo-inverse.png" alt="The Butterfly Project">
                 </a>
             </div>
@@ -18,18 +18,15 @@
                 <div class="nav-menu-wrapper" id="main-nav" >
                     <h1 class="title"> <img class="logo" src="images/logo-inverse.png" alt="The Butterfly Project"></h1>
                     <ul class="nav-menu">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Vision</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Works</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
+                        {% for menuitem in site.menu %}
+                            {% if menuitem.url == pageUrl %}
+                                <li class="nav-item active">
+                            {% else %}
+                                <li class="nav-item">
+                            {% endif %}
+                                    <a class="nav-link" href="{{ menuitem.url }}">{{ menuitem.name }}</a>
+                                </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

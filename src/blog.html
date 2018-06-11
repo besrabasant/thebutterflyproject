@@ -1,0 +1,19 @@
+{% extends "templates/master.html" %}
+
+{% set pageUrl = "blog.html" %}
+
+{% set pageTitle = "Services" %}
+
+{% set pageClass = "works-page " %}
+
+{% block main %}
+   <section class="works">
+        <div class="container-fluid">
+            {% for post in posts %}
+                {% if post.attributes.type == "works" %}
+                    {% include 'templates/works-article.html' %}
+                {% endif %}
+            {% endfor %}
+        </div>
+   </section>
+{% endblock %}

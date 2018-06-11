@@ -5,7 +5,23 @@ section.slider,
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 9;
+}
+
+.slider .slider-wrapper .slider-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.26, 0.29, 0.55, 0.95);
+}
+
+.hide-slider .slider .slider-wrapper .slider-overlay {
+    opacity: 1;
 }
 
 @media screen and (min-width:768px) {
@@ -48,16 +64,33 @@ section.slider,
     color: #fff;
     text-align: left;
     width: 100%;
-    padding: 0 15vw;
-    font-weight: 700;
-    font-size: 1.7rem;
+    padding: 0 6vw;
+    font-size: 1.5rem;
     position: relative;
     top: 80px;
+    word-break: break-word;
+}
+
+.owl-carousel .slide .title .upper,
+.owl-carousel .slide .title .lower {
+    display: block;
+    text-transform: uppercase;
+}
+
+.owl-carousel .slide .title .upper {
+    color: rgba(248, 145, 31, 1);
+    border-bottom: 4px solid #fff;
+    padding-bottom: -2px;
+}
+
+.owl-carousel .slide .title .lower {
+    color: #fff;
 }
 
 .owl-carousel .slide .subtitle {
     margin-top: 15px;
     font-size: 0.7rem;
+    font-weight: 400;
 }
 
 @media screen and (min-width:576px) {

@@ -11,14 +11,20 @@
         "bootstrap": "4.0.0-alpha.6",
         "browser-sync": "^2.18.13",
         "font-awesome": "^4.7.0",
+        "front-matter": "^2.1.2",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^4.0.0",
         "gulp-concat": "^2.6.1",
         "gulp-concat-css": "^2.3.0",
+        "gulp-data": "^1.2.1",
+        "gulp-debug": "^3.1.0",
         "gulp-nunjucks": "^3.0.0",
         "gulp-nunjucks-render": "^2.2.1",
+        "gulp-tap": "^1.0.1",
         "ie10-viewport-bug-workaround": "git+https://github.com/besrabasant/ie10-viewport-bug-workaround.git",
+        "jquery.browser": "^0.1.0",
         "jshint": "^2.9.5",
+        "lodash": "^4.17.4",
         "owl.carousel": "git+https://github.com/OwlCarousel2/OwlCarousel2.git"
     }
 }

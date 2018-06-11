@@ -2,18 +2,33 @@ section.keynote {
     margin-top: 100vh;
     min-height: 100vh;
     position: relative;
-    z-index: 200;
+    pointer-events: through;
+    z-index: 15;
+}
+
+section.keynote .col {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 section.keynote p {
-    padding: 120px 20px;
+    padding: 0px 20px;
     font-size: 1.1rem;
-    color: rgba(239, 163, 100, 1);
+    color: rgba(87, 87, 87, 1);
+    position: relative;
 }
 
 @media screen and (min-width: 576px) {
     section.keynote p {
         padding-left: 40px;
         padding-right: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section.keynote p {
+        padding-left: 6vw;
+        padding-right: 6vw;
+        font-size: 1.5rem;
     }
 }

@@ -1,0 +1,253 @@
+body.no-scroll {
+    overflow: hidden;
+}
+
+.page-template-default .nav .brand.brand-inverse,
+.contact-us-page .nav .brand.brand-inverse,
+.page-template-default .inverse .nav .brand,
+.contact-us-page.inverse .nav .brand {
+    opacity: 0;
+}
+
+.page-template-default .nav .brand,
+.contact-us-page .nav .brand,
+.page-template-default .inverse .nav .brand.brand-inverse,
+.contact-us-page.inverse .nav .brand.brand-inverse {
+    opacity: 1;
+}
+
+.page-template-default .nav .brand:after,
+.contact-us-page .nav .brand:after {
+    color: rgba(74, 88, 167, 1);
+}
+
+.inverse.page-template-default .nav .brand:after,
+.inverse.contact-us-page .nav .brand:after,
+.menu-visible.page-template-default .nav .brand:after,
+.menu-visible.contact-us-page .nav .brand:after {
+    color: #fff;
+}
+
+.page-template-default .nav .nav-menu-toggle .hamburger,
+.page-template-default .nav .nav-menu-toggle .hamburger:before,
+.page-template-default .nav .nav-menu-toggle .hamburger:after,
+.contact-us-page .nav .nav-menu-toggle .hamburger,
+.contact-us-page .nav .nav-menu-toggle .hamburger:before,
+.contact-us-page .nav .nav-menu-toggle .hamburger:after {
+    background-color: rgba(74, 88, 167, 1);
+}
+
+.menu-visible.page-template-default .nav .nav-menu-toggle .hamburger,
+.menu-visible.contact-us-page .nav .nav-menu-toggle .hamburger {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.menu-visible.page-template-default .nav .nav-menu-toggle .hamburger:before,
+.menu-visible.page-template-default .nav .nav-menu-toggle .hamburger:after,
+.menu-visible.contact-us-page .nav .nav-menu-toggle .hamburger:before,
+.menu-visible.contact-us-page .nav .nav-menu-toggle .hamburger:after {
+    background-color: #fff;
+}
+
+.contact-us-page .nav-fixed {
+    z-index: 110;
+}
+
+.contact-us-page .nav-menu-wrapper {
+    height: 30px;
+    transition: opacity 0.5s cubic-bezier(0.57, 0.24, 0.47, 0.63), height 0s ease 0.5s;
+}
+
+.contact-us-page .nav-menu-wrapper.show {
+    height: 100vh;
+    transition: opacity 0.5s cubic-bezier(0.57, 0.24, 0.47, 0.63);
+}
+
+.contact-us-page .nav-menu {
+    display: none;
+}
+
+.menu-visible.contact-us-page .nav-menu {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-us-page .nav-menu {
+        display: flex;
+    }
+    .contact-us-page .nav .nav-menu .nav-link {
+        color: rgba(87, 87, 87, 1);
+    }
+}
+
+section.contact-us .contact-form-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 150px 15px 0;
+    box-sizing: border-box;
+    z-index: 111;
+}
+
+.menu-visible section.contact-us {
+    position: relative;
+    z-index: 0;
+}
+
+section.contact-us .contact-form {
+    position: absolute;
+    width: calc(100% - 30px);
+}
+
+@media screen and (min-width: 768px) {
+    section.contact-us .contact-form-wrapper {
+        padding-top: 0;
+    }
+    section.contact-us .contact-form {
+        top: 55%;
+        transform: translateY(-50%);
+    }
+}
+
+.contact-form .greeting,
+.contact-form .acknowledge {
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: rgba(74, 88, 167, 1);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-form .greeting,
+    .contact-form .acknowledge {
+        text-align: left;
+    }
+}
+
+.contact-form .form-input {
+    position: relative;
+}
+
+.contact-form .form-input input,
+.contact-form .form-input textarea {
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(74, 88, 167, 1);
+    border: none;
+    position: relative;
+}
+
+.contact-form .form-input input {
+    padding: 8px 2px;
+    text-align: center;
+    background-color: transparent;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0px 9999px white;
+}
+
+.contact-form .form-input textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    resize: none;
+    text-align: left;
+    line-height: 2.2;
+}
+
+.contact-form .form-input .label {
+    position: absolute;
+    top: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(74, 88, 167, 1);
+    width: 100%;
+    padding: 7px 2px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (min-width: 768px) {
+    .contact-form .form-input input,
+    .contact-form .form-input .label {
+        text-align: left;
+    }
+}
+
+.contact-form .form-input.message,
+.contact-form .form-input.input {
+    background-image: url('./../images/underline.png');
+    background-repeat: repeat;
+    background-position: top left;
+}
+
+.contact-form .form-input.message {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-input input:focus,
+.contact-form .form-input textarea:focus {
+    outline: none;
+}
+
+.contact-form .submit-btn {
+    margin-top: 30px;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    width: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.contact-form .submit-btn:hover {
+    transform: translateX(0%);
+}
+
+@media screen and (min-width:768px) {
+    .contact-form .submit-btn {
+        left: 75%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .contact-form .submit-btn {
+        left: 90%;
+    }
+}
+
+.contact-form .submit-btn:active,
+.contact-form .submit-btn:focus {
+    outline: none;
+}
+
+.contact-form .submit-btn:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: rgba(74, 88, 167, 1);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.contact-form .submit-btn:after {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%) rotate(45deg);
+    border-top: 2px solid;
+    border-right: 2px solid;
+    border-color: rgba(74, 88, 167, 1);
+}
